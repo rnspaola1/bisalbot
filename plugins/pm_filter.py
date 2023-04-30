@@ -3,6 +3,10 @@ import re
 import ast
 import math
 import random
+from telegraph import Telegraph
+telegraph = Telegraph()
+telegraph.create_account(short_name='my_account')
+
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
@@ -57,7 +61,7 @@ async def fil_mod(client, message):
           await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
 
 @Client.on_message((filters.group) & filters.text & filters.incoming)
-async def give_filter(client,message):
+async def give_filter(client, message):
     await global_filters(client, message)
     group_id = message.chat.id
     name = message.text
@@ -71,33 +75,18 @@ async def give_filter(client,message):
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
 
-            if btn is not None:
+            if fileid:
                 try:
-                    if fileid == "None":
-                        if btn == "[]":
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
-                        else:
-                            button = eval(btn)
-                            await message.reply_text(
-                                reply_text,
-                                disable_web_page_preview=True,
-                                reply_markup=InlineKeyboardMarkup(button)
-                            )
-                    elif btn == "[]":
-                        await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or ""
-                        )
-                    else:
-                        button = eval(btn) 
-                        await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(button)
-                        )
+                    telegraph_url = telegraph.create_page(
+                        title=f'{keyword} Result',
+                        html_content=f'<p>{reply_text}</p><p><a href="{fileid}">View Image/Video</a></p>'
+                    )
+                    await message.reply_text(telegraph_url['url'], disable_web_page_preview=True)
                 except Exception as e:
                     print(e)
-                break 
+            else:
+                await message.reply_text(reply_text, disable_web_page_preview=True)
+            break 
 
     else:
         if FILTER_MODE.get(str(message.chat.id)) == "False":
@@ -105,6 +94,7 @@ async def give_filter(client,message):
         else:
             await auto_filter(client, message)
 
+            
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
     content = message.text
