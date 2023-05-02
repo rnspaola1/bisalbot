@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>Hello 👦 {},
+    START_TXT = """<b>Hello  {},
 I am File Searcher Bot\nJust Type Movie Name And See Magic✨🎩✨\n\nTo Activate This Bot In Your Group Send Message To @Cyniteofficial"""
     
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
