@@ -166,9 +166,7 @@ async def next_page(bot, query):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton('How To Watch', url='https://t.me/How_to_watchmovie'),
-             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
+             InlineKeyboardButton('How To Watch', url='https://t.me/How_to_watchmovie')
          ]
     )
     if 0 < offset <= 10:
@@ -904,9 +902,9 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton('How To Watch', url='https://t.me/How_to_watchmovie'), 
-             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
+             
+             InlineKeyboardButton('How To Watch', url='https://t.me/How_to_watchmovie')
+             
          ]
     )
 
