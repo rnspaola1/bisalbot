@@ -1,12 +1,6 @@
-if [ -z $UPSTREAM_REPO ]
-then
-  echo "Cloning main Repository"
-  git clone https://github.com/hintpirox/tgraph.git /tgraph
-else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /tgraph
-fi
+echo "Cloning Repo...."
+git clone https://github.com/Hintpirox/tgraph.git /tgraph
 cd /tgraph
-pip3 install -U -r requirements.txt
-echo "𝙎𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙀𝙡𝙨𝙖....🧞‍♂️"
+pip3 install -r requirements.txt
+echo "Starting Bot...."
 python3 bot.py
