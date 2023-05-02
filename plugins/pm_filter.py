@@ -698,16 +698,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "source":
-        buttons = [[
-            InlineKeyboardButton('Contact', url='https://t.me/cyniteofficial'),
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SOURCE_TXT,
-            reply_markup=reply_markup,
-
+    
     elif query.data == "button":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='manuelfilter')
