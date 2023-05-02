@@ -1,6 +1,12 @@
-echo "Cloning Repo...."
-git clone https://github.com/Hintpirox/tgraph.git /tgraph
+if [ -z $UPSTREAM_REPO ]
+then
+  echo "Cloning main Repository"
+  git clone https://github.com/hintpirox/tgraph.git /tgraph
+else
+  echo "Cloning Custom Repo from $UPSTREAM_REPO "
+  git clone $UPSTREAM_REPO /tgraph
+fi
 cd /tgraph
-pip3 install -r requirements.txt
-echo "Starting Bot...."
+pip3 install -U -r requirements.txt
+echo "𝙎𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙀𝙡𝙨𝙖....🧞‍♂️"
 python3 bot.py
