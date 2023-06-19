@@ -48,7 +48,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/2992a480cae2bc0de1c39.jpg')).split()
+PICS = (environ.get('PICS', 'https://graph.org/file/e0c274537e59ca5a16bb3.jpg')).split()
 NOR_IMG = environ.get('NOR_IMG', "https://graph.org/file/c72693d3ccd5f9a8702fd.jpg")
 SPELL_IMG = environ.get('SPELL_IMG',"https://graph.org/file/fd2b2037359f741c7501e.jpg")
 
@@ -84,8 +84,8 @@ MONGO_URL = os.environ.get('MONGO_URL', "")
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 #url links
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'd20bcaa93a1e0a9e238529d51acc5cd5523d47aa')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omnifly.in.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', '5bb6e402dd86fb8774690a5f4a65d2a2c0c04877')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK',True))
 
 #Auto approve 
@@ -99,9 +99,9 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 PORT = os.environ.get("PORT", "8080")
 MAX_BTN = int(environ.get('MAX_BTN', "7"))
-S_GROUP = environ.get('S_GROUP',"https://t.me/cyniteofficial")
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/cynitebackup")
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/Cynitebackup")
+S_GROUP = environ.get('S_GROUP',"https://t.me/Biisal")
+MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/Movie_Url")
+FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/Movie_Url")
 MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
