@@ -122,7 +122,7 @@ Akhand Bharat 🇮🇳
     SUR_TXT = """
 <b>
 Hello {}, 
-I am File Searcher Bot\nJust Type Movie Name Name And See Magic ✨🎩✨\n\n To Activate This Bot In Group Message @Cyniteofficial</b>
+I am File Searcher Bot\nJust Type Movie Name Name And See Magic ✨🎩✨\n\n To Activate This Bot In Group Message @biisal</b>
 """
 
     IMDB_TEMPLATE_TXT = """
