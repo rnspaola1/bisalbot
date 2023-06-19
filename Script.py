@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """<b>Hello  {},
-I am File Searcher Bot\nJust Type Movie Name And See Magic✨🎩✨\n\nTo Activate This Bot In Your Group Send Message To @Cyniteofficial"""
+I am File Searcher Bot\nJust Type Movie Name And See Magic✨🎩✨\n\nTo Activate This Bot In Your Group Send Message To @Biisal"""
     
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
